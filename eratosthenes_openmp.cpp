@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <cmath>
@@ -64,15 +65,15 @@ int main(int argc, char* argv[]) {
     
     std::cout << "Found " << primes.size() << " primes up to " << n << std::endl;
     std::cout << "Time taken: " << end_time - start_time << " seconds" << std::endl;
-    
-    // Uncomment to print the first few primes
-    /*
-    std::cout << "First few primes: ";
-    for (size_t i = 0; i < std::min(primes.size(), size_t(10)); i++) {
+
+    // Print all primes
+    std::cout << "All primes: ";
+    for (size_t i = 0; i < primes.size(); i++) {
         std::cout << primes[i] << " ";
     }
+
     std::cout << std::endl;
-    */
+    
     
     return 0;
 }

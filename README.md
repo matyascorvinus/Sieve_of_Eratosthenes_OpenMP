@@ -46,6 +46,30 @@ This implementation uses OpenMP to parallelize the Sieve of Eratosthenes algorit
 - A C++ compiler with OpenMP support (GCC, Clang, etc.)
 - OpenMP library installed on your system
 
+
+### Installing OpenMP
+
+#### On Ubuntu
+Install GCC compiler if not already installed
+
+```bash
+sudo apt update
+sudo apt install build-essential
+```
+
+
+Install OpenMP library
+
+```bash
+sudo apt-get install libomp-dev
+gcc -fopenmp -v # Check if OpenMP is installed
+```
+
+#### On Windows using MinGW
+```bash
+sudo apt-get install libomp-dev
+```
+
 ### Compiling the Code
 ```bash
 g++ -fopenmp eratosthenes_openmp.cpp -o eratosthenes_openmp
@@ -86,3 +110,4 @@ Where `[upper_limit]` is an optional parameter specifying the maximum number to 
 - "OpenMP Introduction with Installation Guide". Available at: https://www.geeksforgeeks.org/openmp-introduction-with-installation-guide/
 - "OpenMP on Ubuntu". Available at: https://medium.com/swlh/openmp-on-ubuntu-1145355eeb2
 - "Install OpenMP on Windows using MinGW". Available at: https://www.toolify.ai/ai-news/install-openmp-on-windows-using-mingw-a-stepbystep-guide-659927
+
